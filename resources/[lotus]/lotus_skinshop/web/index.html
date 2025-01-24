@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet/less" type="text/css" href="./styles/styles.less"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>flaviin#0001 & pdr#8400</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  </head>
+  <body style="display: none">
+    <div id="app">
+      <header>
+        <h1>LOJA DE ROUPAS</h1>
+        <div class="options">
+          <div class="option" onclick="app.setOption('clothes')">
+            <p>ROUPAS</p>
+            <img draggable="false"src="./assets/clothes.png">
+          </div>
+          <div class="option" onclick="app.setOption('utils')">
+            <p>UTILIDADES</p>
+            <img draggable="false"src="./assets/utils.png">
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="options">
+          <section id="utils" style="display: none;">
+            <div class="option" data-type="mask">
+              <div class="title">MASCARAS</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/mask.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="bracelet">
+              <div class="title">BRACELETE</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/bracelet.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="watch">
+              <div class="title">RELOGIO</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/watch.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="ear">
+              <div class="title">ORELHA</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"draggable="false" src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/ear.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="decals">
+              <div class="title">ADESIVOS</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/decals.png" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="glass">
+              <div class="title">Óculos</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/glass.svg" id="typeImage">
+              </div>
+            </div>
+          </section>
+          <section id="clothes">
+            <div class="option" data-type="arms">
+              <div class="title">MÃOS</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/hands.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="hat">
+              <div class="title">CHAPEU</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/hat.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="tshirt">
+              <div class="title">CAMISA</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/tshirt.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="torso">
+              <div class="title">JAQUETA</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/torso.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="vest">
+              <div class="title">COLETE</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/vest.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="accessory">
+              <div class="title">ACESSÓRIOS</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/acessory.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="pants">
+              <div class="title">CALÇAS</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/pants.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="backpack">
+              <div class="title">MOCHILA</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/backpack.svg" id="typeImage">
+              </div>
+            </div>
+            <div class="option" data-type="shoes">
+              <div class="title">SAPATOS</div>
+              <div class="items">
+                <div class="item">
+                  <div class="type">ITEM</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="type">TEXTURA</div>
+                  <div class="typeInfo">
+                    <span onclick="app.updateValue(this, 'left')">
+                      <img draggable="false"src="./assets/leftArrow.svg">
+                    </span>
+                    <input type="number" placeholder="0" value = "0" onchange="app.changeValue(this)">
+                    <span onclick="app.updateValue(this, 'right')">
+                      <img draggable="false"src="./assets/rightArrow.svg">
+                    </span>
+                  </div>
+                </div>
+                <img draggable="false"src="./assets/shoes.svg" id="typeImage">
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <button onclick="app.close()">Salvar</button>
+      </footer>
+    </div>
+
+    <div id="cams">
+      <span>PRESSIONE<br>A <small>OU</small> D</span>
+      <div class="keys"> 
+        <div class="key">
+          <img draggable="false"src="./assets/SETINHA-ICON-1.svg">
+          <p>A</p>
+        </div>
+        <img draggable="false"src="./assets/Vector.svg">
+        <div class="key">
+          <p>D</p>
+          <img draggable="false"src="./assets/SETINHA-ICON.svg">
+        </div>
+      </div>
+    </div>
+    <div id="bodyCams">  
+      <img draggable="false"class="set-camera" data-value="1" src="./assets/headCam.svg">
+      <img draggable="false"class="set-camera" data-value="2" src="./assets/bodyCam.svg">
+      <img draggable="false"class="set-camera" data-value="3" src="./assets/feetCam.svg">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

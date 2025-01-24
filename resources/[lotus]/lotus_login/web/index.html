@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flaviin#0001</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+</head>
+<body style="display: none;">
+  <div id = 'app'>
+    <img src="./assets/logo.png" alt="Logo">
+    <div class = 'cardsContainer'>
+      <div onclick="app.changeCentered('left')">
+        <img src="./assets/leftArrow.svg" alt="">
+      </div>
+      <div class = 'cards'>
+        
+      </div>
+      <div onclick="app.changeCentered('right')">
+        <img src="./assets/rightArrow.svg" alt="">
+      </div>
+
+      <button onclick="app.selectSpawn('fechar')">Ultima localização</button>
+    </div>
+    <h1>SPAWN</h1>
+
+  </div>
+  <script src="./scripts/config.js"></script>
+  <script src="./scripts/scripts.js"></script>
+</body>
+</html>

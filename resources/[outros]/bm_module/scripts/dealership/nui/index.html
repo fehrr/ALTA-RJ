@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dealership/nui/styles/styles.css"/>
+
+    <title>pdr#8400</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h2>BEM VINDO A</h2>
+        <h1>CONCESSIONARIA</h1>
+      </header>
+      <main>
+        <section id="vehiclesTypes" >
+          <div class="types">
+            <div class="type" onclick="setType('sedans')">
+              <p>SEDAN</p>
+              <img src="dealership/nui/assets/sedan.png" alt="Vehicle Type Image">
+            </div>
+            <div class="type" onclick="setType('suvs')">
+              <p>SUV</p>
+              <img src="dealership/nui/assets/suv.png" alt="Vehicle Type Image">
+            </div>
+            <div class="type" onclick="setType('imports')">
+              <p>IMPORTADOS</p>
+              <img src="dealership/nui/assets/imported.png" alt="Vehicle Type Image">
+            </div>
+            <div class="type" onclick="setType('service')">
+              <p>CAMINHOES</p>
+              <img src="dealership/nui/assets/trucks.png" alt="Vehicle Type Image">
+            </div>
+            <div class="type" onclick="setType('motos')">
+              <p>MOTOS</p>
+              <img src="dealership/nui/assets/cycles.png" alt="Vehicle Type Image">
+            </div>
+            <div class="type" onclick="setType('others')">
+              <p>OUTROS</p>
+              <img src="dealership/nui/assets/others.png" alt="Vehicle Type Image">
+            </div>
+          </div>
+          <div class="modes">
+            <div class="mode" onclick="setType('myVehicles')">
+              <p>MEUS VEICULOS</p>
+            </div>
+            <div class="mode" onclick="setType('vip')">
+              <p>VIPS</p>
+            </div>
+          </div>
+        </section>
+        <section id="vehiclesInfos" style="display: none">
+          <div class="content">
+            <div class="menu">
+              <div class="input">
+                <input type="text" placeholder="Pesquise por um veiculo" oninput="searchVehicle(event)">
+                <img src="dealership/nui/assets/search.svg" alt="Search">
+              </div>
+              <button onclick="back()">VOLTAR</button>
+            </div>
+            <div class="vehicles"></div>
+          </div>
+          <div class="vehicleStat">
+            <h3>McLaren P1</h3>
+            <img src="dealership/nui/assets/t20.png" alt="Vehicle Image">
+            <div class="stats">
+              <div class="stat">
+                <p>Velocidade</p>
+                <div class="statAmount">
+                  <div></div>
+                </div>
+              </div>
+              <div class="stat">
+                <p>Frenagem</p>
+                <div class="statAmount">
+                  <div></div>
+                </div>
+              </div>
+              <div class="stat">
+                <p>Agilidade</p>
+                <div class="statAmount">
+                  <div></div>
+                </div>
+              </div>
+              <div class="stat">
+                <p>Aderência</p>
+                <div class="statAmount">
+                  <div></div>
+                </div>
+              </div>
+              <div class="buttons">
+                <button>COMPRAR</button>
+                <button>TEST-DRIVE</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="dealership/nui/script.js"></script>
+  </body>
+</html>

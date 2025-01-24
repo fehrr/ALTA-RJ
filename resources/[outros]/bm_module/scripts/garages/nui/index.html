@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="garages/nui/styles/styles.css"/>
+
+    <title>pdr#8400</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h2>BEM VINDO A SUA</h2>
+        <h1>GARAGEM</h1>
+        <section>
+          <button>TODOS</button>
+          <div class="input">
+            <input type="text" placeholder="Pesquise por um veiculo" oninput="searchVehicle(event)">
+            <img src="garages/nui/assets/search.svg" alt="Search">
+          </div>
+          <!-- <button>FAVORITOS</button> -->
+        </section>
+      </header>
+      <main>
+        <div class="vehicleInfo">
+          <h3>Você não possui veiculos</h3>
+          <!-- <img src="./assets/star.svg" alt="Star"> -->
+          <section>
+            <img src="" alt="Vehicle" id="vehicleImage">
+            <div class="infos">
+              <div class="vehicleStats">
+                <img src="garages/nui/assets/ipva.svg" alt="Ipva" id="ipva">
+                <div class="stats">
+                  <div class="stat">
+                    <p>Velocidade</p>
+                    <div class="statAmount">
+                      <p>??? Km/h</p>
+                    </div>
+                  </div>
+                  <div class="stat">
+                    <p>Frenagem</p>
+                    <div class="statAmount">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="stat">
+                    <p>Agilidade</p>
+                    <div class="statAmount">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="stat">
+                    <p>Aderência</p>
+                    <div class="statAmount">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vehicleButtons">
+                <button>RETIRAR</button>
+                <button>GUARDAR PROXIMO</button>
+                <button>GUARDAR</button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="vehicles"></div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="garages/nui/script.js"></script>
+  </body>
+</html>

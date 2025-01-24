@@ -1,0 +1,262 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background: url(../assets/background.png);
+}
+
+#login {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+header h1 {
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 1.756vw;
+  line-height: 99.4%;
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+header h1 strong {
+  font-weight: 900;
+  font-size: 2.455vw;
+  line-height: 99.4%;
+  
+  text-align: center;
+  
+  background: linear-gradient(190.1deg, rgba(255, 27, 27, 0.78) -13.02%, rgba(132, 31, 0, 0.78) 34.47%, rgba(245, 75, 75, 0.78) 54.82%, rgba(255, 23, 23, 0.78) 73.67%, rgba(118, 0, 0, 0.712) 106.08%), #ff0000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  
+}
+
+header p {
+  font-size: 1.008vw;
+  line-height: 99.4%;
+  
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.135em;
+  
+  color: #FFFFFF;
+  margin-top: 1.591vw;
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+main svg {
+  width: 42.136vw;
+  height: 7.045vw;
+}
+
+main .steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .steps h3 {
+  width: 8.969vw;
+  height: 1.561vw;
+  
+  background: radial-gradient(57.82% 332.2% at 50% 100%, rgba(205, 0, 0, 0.74) 0%, rgba(205, 0, 0, 0) 100%), rgba(0, 0, 0, 0.75);
+  border: 0.032vw solid rgba(205, 0, 0, 0.31);
+  border-radius: 0.185vw;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.778vw;
+  line-height: 99.4%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  
+  color: #FFFFFF;
+
+  position: relative;
+  top: 0.5vw;
+
+  z-index: 1;
+}
+
+main .steps > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.252vw;
+}
+
+main .steps > div .group {
+  width: 31.66vw;
+  height: 2.954vw;
+  
+  background: radial-gradient(50.17% 537.8% at 50% -33.54%, rgba(205, 0, 0, 0.14) 0%, rgba(0, 80, 205, 0) 100%), rgba(0, 0, 0, 0.75);
+  border-radius: 0.185vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main .steps > div .group span {
+  position: absolute;
+  transform: translate(0%, -50%);
+  top: 50%;
+  left: 0;
+
+  font-weight: 700;
+  font-size: 4.198vw;
+  line-height: 99.4%;
+  /* identical to box height, or 4.182vw */
+  
+  text-align: center;
+  letter-spacing: -0.04em;
+  
+  background: linear-gradient(180deg, #cd0000 0%, rgba(0, 80, 205, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+main .steps > div .group p {
+  font-weight: 500;
+  font-size: 0.778vw;
+  line-height: 99.4%;
+  /* identical to box height, or 0.773vw */
+  
+  text-align: center;
+  letter-spacing: -0.04em;
+  
+  color: #FFFFFF;
+  
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1vw;
+
+  margin-top: 0.591vw;
+}
+
+footer h4 {
+  font-weight: 400;
+  font-size: 0.771vw;
+  line-height: 99.4%;
+  
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  
+  color: #FFFFFF;
+}
+
+footer > button {
+  width: 11.318vw;
+  height: 3.5vw;
+
+  background: radial-gradient(57.82% 332.2% at 50% 100%, rgba(205, 0, 0, 0.74) 0%, rgba(0, 80, 205, 0) 100%), rgba(0, 0, 0, 0.75);
+  border: 0.045vw solid rgba(205, 24, 0, 0.31);
+  border-radius: 0.234vw;
+
+  font-weight: 700;
+  font-size: 1.636vw;
+  line-height: 99.4%;
+  
+  text-align: center;
+  letter-spacing: -0.04em;
+  
+  color: #FFFFFF;
+  position: relative;
+}
+
+footer > button.copy:after {
+  content: 'COPIADO';
+  width: 6.909vw;
+  height: 1.682vw;
+
+  background: rgba(0, 0, 0, 0.67);
+  border-radius: 0.182vw;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 1.129vw;
+  line-height: 99.4%;
+  /* identical to box height, or 1.136vw */
+  
+  text-align: center;
+  letter-spacing: -0.04em;
+  
+  color: #FFFFFF;
+}
+
+footer .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.773vw;
+}
+
+footer .buttons button {
+  width: 9.955vw;
+  height: 2.375vw;
+
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(205, 24, 0, 0.28) 0%, rgba(0, 80, 205, 0) 100%), rgba(0, 0, 0, 0.1);
+  border: 0.034vw solid #cd0700;
+
+  font-weight: 600;
+  font-size: 0.564vw;
+  line-height: 99.4%;
+  
+  text-align: center;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+}

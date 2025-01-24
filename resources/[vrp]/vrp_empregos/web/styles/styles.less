@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  #app {
+    width: 699px;
+    border-radius: 9px;
+    background: rgba(26, 29, 44, 0.9);
+    box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.45);
+
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    z-index: 0.9;
+    padding: 30px 35px;
+
+    display: none;
+    animation: fadeIn .2s linear;
+
+    &::before {
+      content: '';
+      width: 625px;
+      height: 3px;
+      left: 50%;
+      bottom: 0;
+      position: absolute;
+      transform: translate(-50%);
+      background: linear-gradient(270deg, rgba(51, 82, 245, 0) 0%, #3352F5 48.96%, rgba(51, 82, 245, 0) 100%);
+    }
+
+    header {
+      gap: 20px;
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 40px;
+
+      img {
+        width: 60px;
+      }
+
+      .title {
+        small {
+          font-size: 12px;
+          font-weight: 300;
+          color: #FFFFFF;
+        }
+
+        h1 {
+          font-weight: 900;
+          font-size: 48px;
+          letter-spacing: -0.04em;
+          color: #1752FE;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    main {
+      overflow: auto;
+      max-height: 286px;
+      
+      .route {
+        width: 636px;
+        height: 97px;
+        border-radius: 4px;
+        background: radial-gradient(100% 4299.03% at 0% 0%, rgba(23, 82, 254, 0.6) 11.98%, rgba(26, 38, 79, 0.6) 35.94%, rgba(26, 29, 44, 0.6) 100%);
+
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 23px;
+        margin-bottom: 25px;
+        
+        .itemInfo {
+
+          img {
+            width: 80px;
+            height: 80px;
+          }
+
+          small {
+            display: block;
+            font-weight: 300;
+            font-size: 12px;
+            color: #FFFFFF;
+            width: 230px;
+          }
+
+          p {
+            color: #FFFFFF;
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+          }
+        }
+
+        button {
+          border-radius: 3px;
+          background: transparent;
+          border: 0.6px solid #1752FE;
+
+          padding: 7px 10px;
+
+          font-weight: 900;
+          font-size: 16px;
+          letter-spacing: 0.02em;
+          color: #FFFFFF;
+
+          cursor: pointer;
+          transition: .2s linear;
+
+          &:hover {
+            background: #1752FE;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    } to {
+      opacity: 1;
+    }
+  }
+}

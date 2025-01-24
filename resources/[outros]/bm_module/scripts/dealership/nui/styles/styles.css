@@ -1,0 +1,472 @@
+@font-face {
+  font-family: "Bayside";
+  src: url("../assets/fonts/BAYSIDEFONT-CONDENSED-DEMO.OTF");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container_dealership, body {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://media.discordapp.net/attachments/970652202718871573/1110714263745597511/image.png?width=1201&height=675');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#app header h2 {
+  font-weight: 500;
+  font-size: 43.641px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  background: linear-gradient(
+    154.25deg,
+    #cd0000 10.5%,
+    #ec1d1d 24.03%,
+    #420000 39.07%,
+    #cd0000 39.08%,
+    #ff3737 51.1%,
+    #ff0000 62.12%,
+    #420000 62.13%,
+    #ff0000 82.17%,
+    #630000 92.69%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0px 0px 129.636px rgba(255, 102, 102, 0.33);
+}
+
+#app header h1 {
+  font-weight: 900;
+  font-size: 51.8751px;
+  line-height: 63px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-shadow: 0px 0px 154.096px rgba(255, 102, 102, 0.33);
+}
+
+#app main {
+  margin-top: 51px;
+}
+
+#app main section#vehiclesTypes .types {
+  gap: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#app main section#vehiclesTypes .types .type {
+  height: 575px;
+  width: 277px;
+
+  background-size: contain;
+  background-position: center;
+  background-image: url("../assets/typeBackground.png");
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 70px;
+}
+
+#app main section#vehiclesTypes .types .type:hover {
+  transition: border .3s;
+  border-top: 1px solid red;
+}
+
+#app main section#vehiclesTypes .types .type:hover p {
+  transition: color .4s;
+  color:#ff0000;
+}
+
+#app main section#vehiclesTypes .types .type p {
+  font-weight: 400;
+  font-size: 100px;
+  font-family: Bayside;
+  line-height: 100px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 0px 87px rgba(255, 255, 255, 0.16);
+  letter-spacing: 3px;
+}
+
+#app main section#vehiclesTypes .types .type img {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+#app main section#vehiclesTypes .modes {
+  gap: 18px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#app main section#vehiclesTypes .modes .mode {
+  width: 867px;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app main section#vehiclesTypes .modes .mode p {
+  font-family: Bayside;
+  font-weight: 400;
+  font-size: 63px;
+  letter-spacing: 0.21em;
+  color: #ffffff;
+}
+
+#app main section#vehiclesTypes .modes .mode:first-child {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/mode1.png");
+}
+
+#app main section#vehiclesTypes .modes .mode:last-child {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/mode2.png");
+}
+
+#app main section#vehiclesInfos {
+  display: flex;
+  align-items: center;
+}
+
+#app main section#vehiclesInfos .content .menu {
+  gap: 26px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+#app main section#vehiclesInfos .content .menu .input {
+  width: 646px;
+  height: 41px;
+  background: linear-gradient(
+      270deg,
+      rgba(0, 80, 205, 0.05) 0%,
+      rgba(0, 80, 205, 0) 49.76%,
+      rgba(0, 80, 205, 0.05) 98.49%
+    ),
+    rgba(0, 0, 0, 0.55);
+  border: 0.849633px solid #cd0000;
+  border-radius: 5.91784px;
+  position: relative;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+#app main section#vehiclesInfos .content .menu .input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+
+  color: white;
+}
+
+#app main section#vehiclesInfos .content .menu .input img {
+  right: 20px;
+  position: absolute;
+}
+
+#app main section#vehiclesInfos .content .menu button {
+  height: 42px;
+  width: 176px;
+  border-radius: 0px;
+  font-weight: 600;
+  font-size: 9.97317px;
+  color: #ffffff;
+  background: radial-gradient(
+      126.79% 126.79% at 50% 100%,
+      rgba(205, 0, 0, 0.28) 0%,
+      rgba(0, 80, 205, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #cd0000;
+}
+
+#app main section#vehiclesInfos .content .vehicles {
+  width: 865px;
+  height: 760px;
+
+  gap: 22px 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+#app main section#vehiclesInfos .content .vehicles::-webkit-scrollbar {
+  width: 6px;
+}
+
+#app main section#vehiclesInfos .content .vehicles::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+#app main section#vehiclesInfos .content .vehicles::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#app main section#vehiclesInfos .content .vehicles .vehicle {
+  width: 276px;
+  height: 320px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/vehicleBackground.png");
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 12px;
+  padding-bottom: 32px;
+
+  position: relative;
+}
+
+#app main section#vehiclesInfos .content .vehicles .vehicle h4 {
+  font-weight: 600;
+  font-size: 22.6508px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+#app main section#vehiclesInfos .content .vehicles .vehicle img {
+  width: 80%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#app main section#vehiclesInfos .content .vehicles .vehicle p {
+  font-weight: 500;
+  font-size: 15.9394px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+#app main section#vehiclesInfos .content .vehicles .vehicle button {
+  width: 138px;
+  height: 30px;
+  background: #cd0000;
+  border-radius: 5px;
+  border: none;
+  font-weight: 900;
+  font-size: 18.4805px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+
+  bottom: -12px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+#app main section#vehiclesInfos .content .vehicles .vehicle button:hover {
+  background: #ff6f6f;
+}
+
+#app main section#vehiclesInfos .vehicleStat {
+  width: 667px;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#app main section#vehiclesInfos .vehicleStat h3 {
+  font-weight: 800;
+  font-size: 41.7539px;
+  color: #ffffff;
+  width: 308px;
+  height: 41px;
+  /* background: linear-gradient(
+      270deg,
+      rgba(0, 80, 205, 0.05) 0%,
+      rgba(0, 80, 205, 0) 49.76%,
+      rgba(0, 80, 205, 0.05) 98.49%
+    ),
+    rgba(0, 0, 0, 0.55);
+  border-radius: 5.91784px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app main section#vehiclesInfos .vehicleStat img {
+  width: 70%;
+  height: 30%;
+  max-width: 70%;
+  min-height: 30%;
+  margin: 20px 0;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats {
+  width: 576px;
+  height: 281px;
+  background-size: contain;
+  background-position: center;
+  background-image: url("../assets/statsBackground.png");
+
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 99px;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .stat p {
+  font-weight: 600;
+  font-size: 15.7868px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .stat .statAmount {
+  width: 292px;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .stat .statAmount div {
+  width: 20.71px;
+  height: 4px;
+  background: #1c1c1c;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .stat .statAmount div.active {
+  background: #cd0000;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .buttons {
+  gap: 18px;
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .buttons button {
+  width: 176px;
+  height: 42px;
+  border: none;
+  font-weight: 600;
+  font-size: 9.97317px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .buttons button:hover {
+  transition: transform .3s;
+  transform: scale(1.05);
+}
+
+
+#app main section#vehiclesInfos .vehicleStat .stats .buttons button:first-child {
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(41, 255, 127, 0.28) 0%, rgba(41, 255, 127, 0) 100%), rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #29FF7F;
+}
+
+#app main section#vehiclesInfos .vehicleStat .stats .buttons button:last-child {
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(250, 255, 11, 0.28) 0%, rgba(250, 255, 11, 0) 100%), rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #FAFF0B;
+}
+
+
+@media (min-width: 400px) {
+  #app {
+    zoom: 0.2 !important;
+  }
+}
+
+@media (min-width: 800px) {
+  #app {
+    zoom: 0.4 !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  #app {
+    zoom: 0.6 !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #app {
+    zoom: 0.6 !important;
+  }
+}
+
+@media (min-width: 1366px) {
+  #app {
+    zoom: 0.65 !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  #app {
+    zoom: 0.75 !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  #app {
+    zoom: 0.95 !important;
+  }
+}
+
+@media (min-width: 2000px) {
+  #app {
+    zoom: 0.8 !important;
+  }
+}
+
+@media (min-width: 3000px) {
+  #app {
+    zoom: 1.25 !important;
+  }
+}

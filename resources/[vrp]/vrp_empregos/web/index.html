@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet/less" type="text/css" href="./styles/styles.less"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>pdr#8400</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./assets/logo.svg" alt="Logo">
+        <div class="title">
+          <h1>ENTREGA DE DROGAS</h1>
+          <small>ESCOLHA BEM, POIS SUA ESCOLHA IRÁ INFLUENCIAR NO RISCO DA ENTREGA.</small>
+        </div>
+      </header>
+      <main>
+        <div class="route">
+          <div class="itemInfo">
+            <p>ENTREGA SEGURA</p>
+            <small>ROTAS MENORES E PADRONIZADAS ENTREGA APENAS 1 TIPO DE DROGA VALOR MENOR</small>
+          </div>
+          <button onclick="app.start('security')">COMEÇAR</button>
+        </div>
+        <div class="route">
+          <div class="itemInfo">
+            <p>ENTREGA ARRISCADA</p>
+            <small>ROTAS LONGAS E DIFERENTES ENTREGA TODOS OS TIPOS DE DROGA VALOR MAIOR</small>
+          </div>
+          <button onclick="app.start('danger')">COMEÇAR</button>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

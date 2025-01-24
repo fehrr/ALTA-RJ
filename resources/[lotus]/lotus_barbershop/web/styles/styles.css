@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  user-select: none;
+}
+
+body {
+  /* background-color: #1c1c1c; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* position: absolute; */
+  width: 100%;
+  height: 180px;
+
+  top: 50px;
+}
+
+body header h1 {
+  margin-top: 0px;
+  color: white;
+  text-transform: uppercase;
+  height: 300px;
+
+  font-weight: 800;
+  font-size: 48.497px;
+  line-height: 99.4%;
+  /* or 48px */
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+  
+  text-shadow: 0px 0px 68.3823px rgba(255, 255, 255, 0.38);
+}
+
+body .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+
+  padding: 0px 40px;
+
+  position: relative;
+
+  width: max-content;
+  background: radial-gradient(277.67% 132.79% at 147.3% 95.15%, rgba(205, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(105.92deg, rgba(0, 0, 0, 0) -129.48%, #000000 91.94%);
+}
+
+body .container #header {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 23px;
+}
+
+body .container #header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body .container #header div div {
+  position: relative;
+  width: 117px;
+  height: 53px;
+
+  background: linear-gradient(270deg, rgba(205, 0, 0, 0.25) 0%, rgba(0, 80, 205, 0) 49.76%, rgba(205, 0, 0, 0.25) 98.49%);
+  border: 0.849633px solid #cd0000;
+  border-radius: 5.91784px;
+}
+
+body .container #header div.selected div {
+  background: linear-gradient(270deg, rgba(205, 0, 0, 0.55) 0%, rgba(0, 80, 205, 0) 49.76%, rgba(205, 0, 0, 0.55)98.49%);
+  border: 0.849633px solid #cd0000;
+}
+
+body .container #header div  div img {
+  width: 117px;
+  height: 101px;
+  position: absolute;
+
+  bottom: 17px;
+}
+
+body .container #header div  div h3 {
+  /* position: absolute; */
+  bottom: 3.61px;
+  width: 156px;
+  color: #aaaaaa;
+  transition: all .15s;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  font-weight: 700;
+  font-size: 22.973px;
+  line-height: 28px;
+  text-align: center;
+  
+}
+
+body .container #header div.selected div h3 {
+  color: #FFF;
+}
+
+
+body .container #main {
+  margin-top: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 33.6px 0;
+  gap: 26.4px;
+
+  width: 480px;
+  height: 417px;
+  
+  background: radial-gradient(123.5% 98.01% at 50% 100%, rgba(205, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 87.03%), rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+}
+
+body .container #main .inputGroup {
+  width: 428px;
+  height: 49px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: radial-gradient(41.36% 361.22% at 24.18% 100%, rgba(205, 0, 0, 0.15) 0%, rgba(0, 80, 205, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, rgba(0, 0, 0, 0.39);
+  border-radius: 6px;
+  padding: 16px 20px;
+}
+
+body .container #main .inputGroup div {
+  color: white;
+  margin-left: 12px;
+  min-width: 63px;
+  text-align: end;
+}
+
+body .container #main .inputGroup input {
+  appearance: none;
+  width: inherit;
+  height: 4.01px;
+  background: linear-gradient(180deg, #737373 9.9%, #FFFFFF 100%);
+  border-radius: 7.2px 0px 0px 7.2px;
+  border-radius: 7.2px;
+}
+
+body .container #main .inputGroup input::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(75.66% 75.66% at 38.19% 39.14%, #eea3a3 0%, #eea3a3 0.01%, #e36868 26%, #db3c3c 48%, #d62222 65%, #d41818 75%, #d52020 79%, #d83535 85%, #dd5959 92%, #e48a8a 100%);
+  border: none;
+}
+
+body .container #main .inputGroup h5 {
+  font-weight: 600;
+  font-size: 13.9559px;
+  line-height: 17px;
+  min-width: fit-content;
+  /* identical to box height */
+  margin-right: 12px;
+  
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+body .container #footer {
+  width: 480px;
+  height: 131px;
+
+  background: radial-gradient(167.19% 167.56% at 50% 100%, rgba(205, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 87.03%), rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+
+  margin-top: 15.61px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .container #footer > p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 9.6px;
+}
+
+body .container #footer .price {
+  display: flex;
+  font-size: 60px;
+}
+
+body .container #footer .price span {
+  font-weight: 800;
+  font-size: 27.61px;
+  line-height: 33.6px;
+  letter-spacing: -0.035em;
+
+  color: #fa3434;
+
+  font-weight: 900;
+  font-size: 48.8456px;
+  line-height: 60px;
+  
+  color: #cd0000;
+}
+
+body .container #footer .price p {
+  display: flex;
+
+  font-weight: 700;
+  font-size: 48.8456px;
+  line-height: 60px;
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+  margin-left: 5px;
+  
+}
+
+body .container #footer .price p small {
+  font-size: 26px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 39px;
+}
+
+body .container div button {
+  width: 176px;
+  height: 42px;
+  color: white;
+  text-align: center;
+
+  transition: 0.2s linear;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+  text-transform: uppercase;
+  
+}
+
+body .container div button.finish {
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(41, 255, 127, 0.28) 0%, rgba(41, 255, 127, 0) 100%), rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #29FF7F;
+  margin-bottom: 18px;
+  margin-top: 32px;
+}
+
+body .container div button.cancel {
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(255, 55, 55, 0.28) 0%, rgba(255, 55, 55, 0) 100%), rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #FF3737;
+}
+
+body .container #footer .buttons button:hover {
+  color: #fa3434;
+  background-color: white;
+}
+
+#cams {
+  left: 50%;
+  bottom: 25px;
+  transform: translate(-50%);
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#cams span {
+  font-weight: 800;
+  font-size: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+#cams span small {
+  font-weight: 400;
+}
+
+#cams .keys {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+
+  margin: 18px 0;
+}
+#cams .keys .key {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+}
+#cams .keys .key p {
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+@media (min-width: 800px) {
+  .container>* {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 1100px) {
+  .container>* {
+    zoom: 0.9;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container>* {
+    zoom: 0.6;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container>* {
+    zoom: 0.65;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container>* {
+    zoom: 0.75;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container>* {
+    zoom: 0.95;
+  }
+}
+
+@media (min-width: 2000px) {
+  .container>* {
+    zoom: 1;
+  }
+}
+
+@media (min-width: 3000px) {
+  .container>* {
+    zoom: 1;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Lotus - Inventario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://loadingio.github.io/loading-bar/dist/loading-bar.css" />
+    <script type="text/javascript" src="https://loadingio.github.io/loading-bar/dist/loading-bar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    </head>
+
+<body class="inventory">
+    <main>
+        <inventory> 
+            <header>
+                <div class="title" id="invLeftTitle">
+                    <h1>MOCHILA</h1>
+                </div>
+                <div class = "weight left">
+                    <div>
+                        <div class = 'progress-container'>
+                            <div class = 'progress-content'></div>
+                        </div>
+                        <h5 class="inv-weight">1.5/100000.00</h5>
+                    </div>
+                    <img src="./images/mochila.png" alt="">
+                </div>
+            </header>
+            <section class="invLeft"></section>
+        </inventory> 
+
+        <inventoryActions>
+            <input class="amount qtd" min="0" type="text" placeholder="Insira um valor" />
+            <button class="button use">Usar</button>
+            <!-- <img src="https://media.discordapp.net/attachments/1048422526524604437/1079886815500193862/01.png" alt=""> -->
+            <button class="button send">enviar</button>
+        </inventoryActions>
+
+        <inventory>
+            <header>
+                    <div class="title" id="invRightTitle">
+                            <h1>Chão</h1>
+                        </div>
+                    </div>
+                    <div class = "weight right">
+                        <div style="display: none;">
+                            <div class = 'progress-container'>
+                                <div class = 'progress-content'></div>
+                            </div>
+                            <h5>1.5/100000.00</h5>
+                        </div>
+                        <img src="./images/lixo.png" alt="">
+                    </div>
+            </header>
+            <section class="invRight"></section>
+        </inventory>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

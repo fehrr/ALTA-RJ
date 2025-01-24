@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden !important;
+}
+
+#container_garages {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://media.discordapp.net/attachments/970652202718871573/1110714263745597511/image.png?width=1201&height=675');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#app header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#app header h2 {
+  font-weight: 500;
+  font-size: 35.0653px;
+  letter-spacing: 0.1em;
+
+  background: linear-gradient(
+    154.25deg,
+    #cd0000 10.5%,
+    #ec1d1d 24.03%,
+    #420000 39.07%,
+    #cd0000 39.08%,
+    #ff3737 51.1%,
+    #ff0000 62.12%,
+    #420000 62.13%,
+    #ff0000 82.17%,
+    #630000 92.69%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow: 0px 0px 104.162px rgba(255, 102, 102, 0.33);
+}
+
+#app header h1 {
+  font-weight: 900;
+  font-size: 70px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-shadow: 0px 0px 208.393px rgba(255, 102, 102, 0.33);
+}
+
+#app header section {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+}
+
+#app header section button {
+  height: 35px;
+  width: 148px;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 8.38969px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+#app header section button:first-child {
+  background: radial-gradient(
+      126.79% 126.79% at 50% 100%,
+      rgba(205, 0, 0, 0.28) 0%,
+      rgba(0, 80, 205, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.1);
+  border: 0.504735px solid #cd0000;
+}
+
+#app header section button:last-child {
+  background: radial-gradient(
+      126.79% 126.79% at 50% 100%,
+      rgba(250, 255, 11, 0.28) 0%,
+      rgba(250, 255, 11, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.1);
+  border: 0.504735px solid #faff0b;
+}
+
+#app header section .input {
+  width: 646px;
+  height: 41px;
+  background: linear-gradient(
+      270deg,
+      rgba(0, 80, 205, 0.05) 0%,
+      rgba(0, 80, 205, 0) 49.76%,
+      rgba(0, 80, 205, 0.05) 98.49%
+    ),
+    rgba(0, 0, 0, 0.55);
+  border: 0.849633px solid #cd0000;
+  border-radius: 5.91784px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+#app header section .input input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 16.4732px;
+  color: white;
+}
+
+#app header section .input img {
+  right: 20px;
+  position: absolute;
+}
+
+#app main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#app main .vehicleInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#app main .vehicleInfo h3 {
+  font-weight: 800;
+  font-size: 42px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#app main .vehicleInfo section {
+  gap: 60px;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+#app main .vehicleInfo section img#vehicleImage {
+  width: 400px;
+  height: 250px;
+}
+
+#app main .vehicleInfo section .infos {
+  width: 576px;
+  height: 281px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../assets/statsBackground.svg);
+
+}
+
+#app main .vehicleInfo section .infos .vehicleStats {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+#app main .vehicleInfo section .infos .vehicleStats img#ipva {
+  margin-left: 90px;
+}
+
+#app main .vehicleInfo section .infos .vehicleStats .stats {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#app main .vehicleInfo section .infos .vehicleStats .stats .stat p {
+  font-weight: 600;
+  font-size: 15.7868px;
+  text-align: right;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+#app main .vehicleInfo section .infos .vehicleStats .stats .stat .statAmount {
+  gap: 4px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#app
+  main
+  .vehicleInfo
+  section
+  .infos
+  .vehicleStats
+  .stats
+  .stat
+  .statAmount
+  div {
+  width: 20.71px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#app
+  main
+  .vehicleInfo
+  section
+  .infos
+  .vehicleStats
+  .stats
+  .stat
+  .statAmount
+  div.active {
+  background: #cd0000;
+}
+
+#app main .vehicleInfo section .infos .vehicleButtons {
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+#app main .vehicleInfo section .infos .vehicleButtons button {
+  height: 42px;
+  width: 176px;
+  border-radius: 0px;
+  font-weight: 600;
+  font-size: 9.97317px;
+  text-align: center;
+  color: #ffffff;
+}
+
+#app main .vehicleInfo section .infos .vehicleButtons button:hover {
+  transition: all .4s;
+  transform: scale(1.05);
+}
+
+#app main .vehicleInfo section .infos .vehicleButtons button:nth-child(1) {
+  background: radial-gradient(
+      126.79% 126.79% at 50% 100%,
+      rgba(205, 0, 0, 0.28) 0%,
+      rgba(0, 80, 205, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #cd0000;
+}
+
+#app main .vehicleInfo section .infos .vehicleButtons button:nth-child(2) {
+  background: radial-gradient(
+      126.79% 126.79% at 50% 100%,
+      rgba(41, 255, 127, 0.28) 0%,
+      rgba(41, 255, 127, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #29ff7f;
+}
+
+#app main .vehicleInfo section .infos .vehicleButtons button:nth-child(3) {
+  background: radial-gradient(
+      126.79% 126.79% at 50% 100%,
+      rgba(255, 38, 38, 0.28) 0%,
+      rgba(255, 38, 38, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.1);
+  border: 0.6px solid #ff2626;
+}
+
+#app main .vehicles {
+  width: 1610px;
+  height: 412px;
+  margin-top: 20px;
+
+  gap: 18px 7px;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100%;
+  overflow: auto;
+  align-content: flex-start;
+}
+
+#app main .vehicles::-webkit-scrollbar {
+  width: 5.33px;
+}
+
+#app main .vehicles::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+#app main .vehicles::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#app main .vehicles .vehicle {
+  width: 192.79px;
+  height: 223.52px;
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 10px;
+  position: relative;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../assets/vehicleBackground.png) !important;
+}
+
+#app main .vehicles .vehicle img {
+  width: 80%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#app main .vehicles .vehicle button {
+  width: 117px;
+  min-height: 20px;
+  background: #cd0000;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  border: none;
+
+  bottom: -5px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+#app main .vehicles .vehicle button:hover {
+  background: #fd5e5e;
+}
+
+#app main .vehicles .vehicle p {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+
+@media (min-width: 800px) {
+  #app {
+    zoom: 0.6;
+  }
+}
+
+@media (max-width: 800px){ 
+  #app {
+    zoom: 0.45;
+  }
+}
+
+@media (min-width: 1100px) {
+  #app {
+    zoom: 0.6;
+  }
+}
+
+@media (min-width: 1280px) {
+  #app {
+    zoom: 0.6;
+  }
+}
+
+@media (min-width: 1366px) {
+  #app {
+    zoom: 0.65;
+  }
+}
+
+@media (min-width: 1440px) {
+  #app {
+    zoom: 0.75;
+  }
+}
+
+@media (min-width: 1920px) {
+  #app {
+    zoom: 0.95;
+  }
+}
+
+@media (min-width: 2000px) {
+  #app {
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 3000px) {
+  #app {
+    zoom: 1.25;
+  }
+}

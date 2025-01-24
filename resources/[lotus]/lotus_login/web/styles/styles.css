@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background: url(../assets/background.png);
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#app {
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#app > img {
+  position: absolute;
+  top: 10px;
+}
+
+#app .cardsContainer {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  position: relative;
+}
+
+#app .cardsContainer > button {
+  position: absolute;
+
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px 35px;
+
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(250, 255, 11, 0.28) 0%, rgba(250, 255, 11, 0) 100%), rgba(0, 0, 0, 0.1);
+  border: 0.75px solid #FAFF0B;
+
+  font-weight: 600;
+  font-size: 12.4665px;
+  line-height: 99.4%;
+
+  text-transform: uppercase;
+  text-align: center;
+  
+  color: #FFFFFF;
+  transition: all .3s;
+}
+
+#app .cardsContainer > button:hover {
+  zoom: 1.1;
+}
+
+#app .cardsContainer .cards {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 900px;
+  padding: 5px;
+
+  max-width: calc((366px * 3) + (16px * 2));
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+#app .cardsContainer .cards .card {
+  position: relative;
+
+  background: linear-gradient(180deg, rgba(205, 17, 0, 0.25) 0%, rgba(0, 80, 205, 0) 100%);
+  border: 1px solid transparent;
+  border-image: linear-gradient(to bottom, #ff0000, #004fcd00) 1;
+  border-bottom: 0;
+
+  min-width: 341px;
+  height: 656px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+} 
+
+#app .cardsContainer .cards .card.centered {
+  transition: transform .5s;
+  height: 748px;
+
+  transform: scale(1.2);
+  margin: 35px;
+}
+
+#app .cardsContainer .cards .card img {
+  position: absolute;
+  top: -6px;
+  z-index: -1;
+}
+
+#app .cardsContainer .cards .card h3 {
+  font-weight: 800;
+  font-size: 23.5125px;
+  line-height: 29px;
+  
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#app .cardsContainer .cards .card p {
+  width: 270px;
+  height: 150px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 99.4%;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+
+#app .cardsContainer .cards .card button {
+  opacity: 0;
+  background: radial-gradient(126.79% 126.79% at 50% 100%, rgba(205, 0, 0, 0.28) 0%, rgba(0, 80, 205, 0) 100%), rgba(0, 0, 0, 0.1);
+
+  transition: background 1.2s;
+
+  border: 0.6px solid #cd0000;
+
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  padding: 16px 60px;
+  width: fit-content;
+}
+
+#app .cardsContainer .cards .card:hover button {
+  opacity: 1;
+}
+
+#app .cardsContainer .cards .card.centered button {
+  opacity: 1;
+}
+
+#app .cardsContainer .cards .card button:hover {
+  cursor: pointer;
+  background: 
+    radial-gradient(126.79% 126.79% at 50% 100%,
+    rgba(255, 25, 25, 0.28) 70%,
+    rgba(0, 80, 205, 0) 100%),
+    rgba(0, 0, 0, 0.1);
+}
+
+#app h1 {
+  position: absolute;
+  bottom: -100px;
+
+  font-weight: 800;
+  font-size: 228.239px;
+  line-height: 278px;
+  text-align: center;
+
+  background: linear-gradient(180deg, rgba(0, 80, 205, 0) 21.9%, rgba(255, 0, 0, 0.91) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+@media (min-width: 600px) {
+  #app {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 800px) {
+  #app {
+    zoom: 0.5;
+  }
+}
+
+@media (min-width: 1100px) {
+  #app {
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 1280px) {
+  #app {
+    zoom: 0.6;
+  }
+}
+
+@media (min-width: 1366px) {
+  #app {
+    zoom: 0.65;
+  }
+}
+
+@media (min-width: 1440px) {
+  #app {
+    zoom: 0.75;
+  }
+}
+
+@media (min-width: 1920px) {
+  #app {
+    zoom: 0.95;
+  }
+}
+
+@media (min-width: 2000px) {
+  #app {
+    zoom: 0.8;
+  }
+}
+
+@media (min-width: 3000px) {
+  #app {
+    zoom: 1;
+  }
+}
